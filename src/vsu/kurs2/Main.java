@@ -9,16 +9,13 @@ import java.nio.file.Path;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        Path fileName = Path.of("3DModels/Faceform/WrapHead.obj");
+        Path fileName = Path.of("3DModels/Faceform/WrapBody.obj");
         String fileContent = Files.readString(fileName);
 
         System.out.println("Loading model ...");
         Model model = ObjReader.read(fileContent);
 
-        System.out.println("Vertices: " + model.vertices.size());
-        System.out.println("Texture vertices: " + model.textureVertices.size());
-        System.out.println("Normals: " + model.normals.size());
-        System.out.println("Polygons: " + model.polygons.size());
+        showInfoAboutModel(model);
 
         System.out.println();
 
@@ -29,11 +26,14 @@ public class Main {
 
         System.out.println("Loading model ...");
         Model model2 = ObjReader.read(fileContent2);
+        showInfoAboutModel(model2);
 
-        System.out.println("Vertices: " + model2.vertices.size());
-        System.out.println("Texture vertices: " + model2.textureVertices.size());
-        System.out.println("Normals: " + model2.normals.size());
-        System.out.println("Polygons: " + model2.polygons.size());
+    }
 
+    public static void showInfoAboutModel(Model model) {
+        System.out.println("Vertices: " + model.vertices.size());
+        System.out.println("Texture vertices: " + model.textureVertices.size());
+        System.out.println("Normals: " + model.normals.size());
+        System.out.println("Polygons: " + model.polygons.size());
     }
 }

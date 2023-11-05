@@ -15,7 +15,7 @@ public class Main {
         System.out.println("Loading model ...");
         Model model = ObjReader.read(fileContent);
 
-        showInfoAboutModel(model);
+        showInfoAboutTheModel(model);
 
         System.out.println();
 
@@ -26,11 +26,11 @@ public class Main {
 
         System.out.println("Loading model ...");
         Model model2 = ObjReader.read(fileContent2);
-        showInfoAboutModel(model2);
+        showInfoAboutTheModel(model2);
 
     }
 
-    public static void showInfoAboutModel(Model model) {
+    public static void showInfoAboutTheModel(Model model) {
         System.out.println("Vertices: " + model.vertices.size());
         System.out.println("Texture vertices: " + model.textureVertices.size());
         System.out.println("Normals: " + model.normals.size());

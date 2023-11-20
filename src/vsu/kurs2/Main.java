@@ -9,7 +9,7 @@ import java.nio.file.Path;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        Path fileName = Path.of("3DModels/Faceform/WrapBody.obj");
+        Path fileName = Path.of("3DModels/SimpleModelsForReaderTests/NonManifold2.obj");
         String fileContent = Files.readString(fileName);
 
         System.out.println("Loading model ...");
@@ -19,7 +19,7 @@ public class Main {
 
         System.out.println();
 
-        Task.deletePolygons(model);
+        Task.deletePolygons(model,5, false);
 
         Path fileName2 = Path.of("3DModels/Faceform/Test.obj");
         String fileContent2 = Files.readString(fileName2);

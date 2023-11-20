@@ -16,19 +16,43 @@ public class Polygon {
     }
 
     public void setVertexIndices(ArrayList<Integer> vertexIndices) {
-        assert vertexIndices.size() >= 3;
+        if (vertexIndices.size() < 3) {
+            throw new IllegalArgumentException("Illegal number of polygon vertices: " + vertexIndices.size() + ".");
+        }
+
         this.vertexIndices = vertexIndices;
     }
 
     public void setTextureVertexIndices(ArrayList<Integer> textureVertexIndices) {
-        assert textureVertexIndices.size() >= 3;
+        if (vertexIndices.size() < 3) {
+            throw new IllegalArgumentException("Illegal number of polygon texture vertices: " + textureVertexIndices.size() + ".");
+        }
+
         this.textureVertexIndices = textureVertexIndices;
     }
 
     public void setNormalIndices(ArrayList<Integer> normalIndices) {
-        assert normalIndices.size() >= 3;
+        if (vertexIndices.size() < 3) {
+            throw new IllegalArgumentException("Illegal number of normals: " + normalIndices.size() + ".");
+        }
+
         this.normalIndices = normalIndices;
     }
+
+//    public void setVertexIndices(ArrayList<Integer> vertexIndices) {
+//        assert vertexIndices.size() >= 3;
+//        this.vertexIndices = vertexIndices;
+//    }
+//
+//    public void setTextureVertexIndices(ArrayList<Integer> textureVertexIndices) {
+//        assert textureVertexIndices.size() >= 3;
+//        this.textureVertexIndices = textureVertexIndices;
+//    }
+//
+//    public void setNormalIndices(ArrayList<Integer> normalIndices) {
+//        assert normalIndices.size() >= 3;
+//        this.normalIndices = normalIndices;
+//    }
 
     public ArrayList<Integer> getVertexIndices() {
         return vertexIndices;

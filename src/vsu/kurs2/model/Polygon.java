@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 public class Polygon {
 
-    private ArrayList<Integer> vertexIndices;
-    private ArrayList<Integer> textureVertexIndices;
-    private ArrayList<Integer> normalIndices;
+    public ArrayList<Integer> vertexIndices;
+    public ArrayList<Integer> textureVertexIndices;
+    public ArrayList<Integer> normalIndices;
 
 
     public Polygon() {
